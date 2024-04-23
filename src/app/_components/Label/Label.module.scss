@@ -1,0 +1,14 @@
+/* Import color configs (./_variables/colors.scss) */
+@import '@/app/_variables/colors';
+
+.main {
+  width: min-content;
+
+  padding: 0.4em 1em;
+
+  background-color: $ghostWhite;
+
+  &:nth-child(n + 2) {
+    margin-left: 0.8em;
+  }
+}

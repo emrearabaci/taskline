@@ -1,0 +1,15 @@
+/* Import color configs (./_variables/colors.scss) */
+@import '@/app/_variables/colors';
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  min-height: 10vh;
+
+  margin-top: 2em;
+  padding: 2em;
+
+  border-top: 1px solid $platinum;
+}

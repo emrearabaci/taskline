@@ -1,0 +1,93 @@
+/* Import color configs (./_variables/colors.scss) */
+@import '@/app/_variables/colors';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1em;
+
+    padding: 2em;
+
+    .date {
+      font-size: 1em;
+    }
+
+    .time {
+      font-size: 2.6em;
+      font-weight: 1000;
+    }
+
+    .status {
+    }
+
+    .development {
+      border-bottom: 4px solid $powderBlue;
+    }
+
+    .bug {
+      border-bottom: 4px solid $amaranth;
+    }
+
+    .build {
+      border-bottom: 4px solid $atomicTangerine;
+    }
+
+    .person {
+      padding: 0.4em 0;
+      font-weight: 1000;
+
+      border-bottom: 1px solid $platinum;
+    }
+  }
+
+  .completed {
+    align-items: start;
+    margin-left: 50%;
+    border-left: 4px solid $airForceBlue;
+    transform: translateX(-2px);
+  }
+
+  .inQueue {
+    align-items: end;
+    margin-right: 50%;
+    text-align: right;
+    border-right: 4px solid $atomicTangerine;
+    transform: translateX(2px);
+  }
+
+  .inProgress {
+    align-items: end;
+    margin-right: 50%;
+    text-align: right;
+    border-right: 4px solid $powderBlue;
+    transform: translateX(2px);
+  }
+
+  .notProcessed {
+    align-items: end;
+    margin-right: 50%;
+    text-align: right;
+    border-right: 4px solid $amaranth;
+    transform: translateX(2px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    .completed,
+    .inQueue,
+    .inProgress,
+    .notProcessed {
+      margin-right: 0;
+      margin-left: 0;
+      transform: translateX(0);
+    }
+  }
+}

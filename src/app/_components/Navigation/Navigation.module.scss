@@ -1,0 +1,74 @@
+/* Import color configs (./_variables/colors.scss) */
+@import '@/app/_variables/colors';
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2em;
+
+  margin-bottom: 2em;
+  padding: 2em;
+
+  border-bottom: 1px solid $platinum;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  gap: 4em;
+
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  top: 0;
+
+  padding: 2em;
+
+  background-color: $ghostWhite;
+
+  animation: openDrawer 200ms ease;
+
+  z-index: 10;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: 1em;
+  }
+
+  .active {
+    padding-left: 1em;
+    border-left: 1px solid $platinum;
+
+    font-weight: 600;
+
+    transform: translateX(0.4em);
+  }
+}
+
+@keyframes openDrawer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .drawer {
+    width: 100%;
+  }
+}

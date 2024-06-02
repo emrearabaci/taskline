@@ -8,11 +8,11 @@ interface TaskCardProps {
 }
 
 /* Next API */
-import Link from 'next/link';
 import Image from 'next/image';
 
 /* Components */
 import Label from '@/app/_components/Label/Label';
+import Button from '@/app/_components/Button/Button';
 
 /* Styles */
 import styles from '@/app/_components/TaskCard/TaskCard.module.scss';
@@ -26,8 +26,8 @@ export default function TaskCard({
   status
 }: TaskCardProps) {
   const imageConfigs = {
-    width: 34,
-    height: 34,
+    width: 24,
+    height: 24,
     quality: 80,
     priority: true
   };
@@ -61,16 +61,21 @@ export default function TaskCard({
   return (
     <div className={styles.main}>
       <div className={`${styles.card} ${getTaskStatus(status)[0]}`}>
-        <Link href={'/'}>
-          <Image
-            src={'/icon-search.svg'}
-            alt={'image'}
-            width={imageConfigs.width}
-            height={imageConfigs.height}
-            quality={imageConfigs.quality}
-            priority={imageConfigs.priority}
-          />
-        </Link>
+        <Button
+          type={'button'}
+          onClick={null}
+          content={
+            <Image
+              src={'/icon-search.svg'}
+              alt={'image'}
+              width={imageConfigs.width}
+              height={imageConfigs.height}
+              quality={imageConfigs.quality}
+              priority={imageConfigs.priority}
+            />
+          }
+        />
+
         <p className={styles.date}>
           {new Date(date * 1000).toLocaleDateString('en-GB', {
             day: 'numeric',

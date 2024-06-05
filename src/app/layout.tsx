@@ -1,6 +1,10 @@
 /* Next API */
 import type { Metadata } from 'next';
 
+/* Components */
+import Navigation from '@/app/_components/Navigation/Navigation';
+import Footer from '@/app/_components/Footer/Footer';
+
 /* Styles */
 import '@/app/globals.scss';
 
@@ -20,7 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

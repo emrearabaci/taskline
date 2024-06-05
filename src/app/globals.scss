@@ -1,6 +1,9 @@
 /* Import typographic configs (./_variables/typography.scss) */
 @import '@/app/_variables/typography';
 
+/* Import color configs (./_variables/colors.scss) */
+@import '@/app/_variables/colors';
+
 * {
   box-sizing: border-box;
 
@@ -15,4 +18,18 @@ body {
   font-weight: $fontWeight;
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
+
+  color: $default;
+}
+
+a {
+  color: $default;
+
+  text-decoration: none;
+
+  transition: 120ms ease;
+
+  &:hover {
+    transform: translateX(0.4em);
+  }
 }

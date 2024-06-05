@@ -1,13 +1,19 @@
 /* Import color configs (./_variables/colors.scss) */
 @import '@/app/_variables/colors';
 
+/* Import typographic configs (./_variables/typography.scss) */
+@import '@/app/_variables/typography';
+
 .main {
   padding: 1em;
 
+  font-size: $fontSize;
+  letter-spacing: $letterSpacing;
+
+  color: $default;
   background-color: $ghostWhite;
 
   border: none;
-
   box-shadow: $platinum 4px 4px 4px;
 
   cursor: pointer;
